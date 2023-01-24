@@ -1,0 +1,36 @@
+% Definition of the class moderncv with some parameters. Font size 11pt, paper size A4, font sans
+% Source: https://www.overleaf.com/latex/templates/dhik-lebenslauf-vorlage/jscfzhxchjcw
+\documentclass[11pt, a4paper, sans]{moderncv}
+
+% Includes all the necessary packages from packages.tex
+\input{Einstellungen/packages}
+
+% Defines commands and parameters for modifying the included packages
+\input{Einstellungen/commands}
+
+% Beginning of document
+\begin{document}
+    \pagestyle{empty}
+    
+    % Creates the CV title with Name and photo 
+    \begin{minipage}[b]{0.6\textwidth}
+        {\LARGE Edoardo Costantini}
+        \vspace{2em}
+        \input{Inhalt/1_Angaben}                % Personal information
+    \end{minipage}
+    \hfill
+    \fcolorbox{MyColor}{white}{\myPhoto{Abbildungen/photo.jpeg}}
+        
+    % Main content
+    \input{Inhalt/3_Berufserfahrung}        % Work experience
+    \input{Inhalt/2_Studium}                % Studies
+    \input{Inhalt/6_Kenntnisse}             % Skills and interests
+    % \input{Inhalt/4_Praktika}               % Internships
+    % \input{Inhalt/5_Zusatzqualifikationen}  % Further qualifications
+    % \input{Inhalt/7_Extra}                  % Extra information
+    
+    % Signature
+    % \sign{Edoardo Costantini}{Musterstadt}{Abbildungen/signature.jpg}
+
+\end{document}
+
