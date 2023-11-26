@@ -2,6 +2,9 @@
 % Source: https://www.overleaf.com/latex/templates/dhik-lebenslauf-vorlage/jscfzhxchjcw
 \documentclass[11pt, a4paper, sans]{moderncv}
 
+% Rename the bibliogrphy to make sense for a cv
+\renewcommand\refname{Publications}
+
 % Includes all the necessary packages from packages.tex
 \input{Einstellungen/packages}
 
@@ -22,8 +25,8 @@
     \fcolorbox{MyColor}{white}{\myPhoto{Abbildungen/costantini.jpeg}}
         
     % Main content
-    \input{Inhalt/Experience}        % Work experience
-    \input{Inhalt/Studies}                % Studies
+    \input{Inhalt/Experience}         % Work experience
+    \input{Inhalt/Studies}            % Studies
     \input{Inhalt/Skills}             % Skills and interests
     % \input{Inhalt/Internships}               % Internships
     % \input{Inhalt/Additional-qualifications}  % Further qualifications
@@ -31,6 +34,14 @@
     
     % Signature
     % \sign{Edoardo Costantini}{Musterstadt}{Abbildungen/signature.jpg}
+
+% References
+\bibliographystyle{abbrvnat}
+\bibliography{./bib/bibshelf}
+\nocite{costantiniEtAl:2022c}
+\nocite{costantiniEtAl:2023}
+\nocite{costantiniEtAl:2023b}
+\nocite{costantini:2023f}
 
 \end{document}
 
